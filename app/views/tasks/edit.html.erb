@@ -1,0 +1,20 @@
+<h1> Edit a task // mark as done </h1>
+
+<%= form_for @task do |f| %>
+
+  <div>
+    <%= f.label :title %>
+    <%= f.text_field :title, placeholder: 'title of your task'%>
+  </div>
+
+  <div>
+    <%= f.label :details %>
+    <%= f.text_field :details, placeholder: 'details of your task'%>
+  </div>
+  <div>
+    <%= f.label :completed %>
+    <%= f.check_box :completed, placeholder: 'Is it done?'%>
+  </div>
+
+  <%= f.submit %>
+<% end %>
